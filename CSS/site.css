@@ -1,0 +1,252 @@
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntel.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntelBold.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntelBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntel-BoldItalic.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../Fonts/subset-UTMNeoSansIntel-Italic.woff2') format('woff2'), url('../Fonts/subset-UTMNeoSansIntel-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "UTM Duepuntozero";
+	src: url("https://candyfonts.com/wp-data/2018/10/26/11298/UTM Duepuntozero.ttf") format("woff"), url("https://candyfonts.com/wp-data/2018/10/26/11298/UTM Duepuntozero.ttf") format("opentype"), url("https://candyfonts.com/wp-data/2018/10/26/11298/UTM Duepuntozero.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	overflow: hidden;
+	background-color:rgb(0, 32, 99);
+	background-position: center;
+	background-size: cover;
+}
+
+div, img, button, textarea, iframe, select, option, input, label {
+	position:absolute;
+	margin:auto;
+}
+
+video {
+	position:absolute;
+	margin:auto;
+	top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+}
+
+p {
+	margin:auto;
+	position:absolute;
+}
+
+table {
+	margin:auto;
+	position:absolute;
+}
+
+div.graphics {
+	width:100%;
+	height:100%;
+	opacity:1;
+}
+
+div.titles {
+	width:100%;
+	height:100%;
+}
+
+#intro{
+	opacity:0;
+}
+
+#rt1{
+	opacity:0;
+}
+
+#rt2{
+	opacity:0;
+}
+
+#rt3{
+	opacity:0;
+}
+
+#rt4{
+	opacity:0;
+}
+
+div.question {
+	width:100%;
+	height:100%;
+}
+
+#question-1{
+	opacity:0;
+}
+
+#question-2{
+	opacity:0;
+}
+
+div.scoreboard {
+	width:100%;
+	height:100%;
+}
+
+#scoreboard-1{
+	opacity:0;
+}
+
+#scoreboard-2{
+	opacity:0;
+}
+
+#question_content{
+	width:66vw;
+	height:11.5vw;
+	top:38.85vw;
+	left:24.5vw;
+	opacity:0;
+	text-align:center;
+}
+
+#round_q {
+	font-size:2vw;
+	color:white;
+	top:0.4vw;
+	left:50.5vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+}
+
+#players_left {
+	font-size:1.6vw;
+	color:white;
+	top:2.8vw;
+	left:58.4vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+}
+
+#timer {
+	font-size:4vw;
+	width:5vw;
+	height:5vw;
+	top:6.7vw;
+	left:58.6vw;
+	text-align:center;
+	font-family:'UTM Duepuntozero';
+}
+
+#q_text {
+	width:55vw;
+	height:4.5vw;
+	top:3vw;
+	left:0.6vw;
+	font-size:2.1vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	line-height:2.3vw;
+}
+
+#q_text td {
+	text-align:center;
+	vertical-align:middle;
+}
+
+#answer {
+	width:44.2vw;
+	height:2.7vw;
+	top:8.4vw;
+	left:12.2vw;
+	font-size:2.1vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	font-style:italic;
+	line-height:2.3vw;
+	opacity:0;
+}
+
+#round_s {
+	font-size:2.5vw;
+	color:white;
+	top:7.5vw;
+	left:17vw;
+	width:9vw;
+	height:3vw;
+	font-family:'UTM Neo Sans Intel';
+	font-weight:bold;
+	text-align:center;
+	opacity:0;
+}
+
+.nas {
+	font-family:'UTM Neo Sans Intel';
+	width:18.9vw;
+	height:3vw;
+	top:42.3vw;
+}
+
+.sbn {
+	width:15.6vw;
+	text-align:center;
+	height:100%;
+	font-size:2.1vw;
+	padding: 0.2vw;
+	opacity:0;
+}
+
+.sbs {
+	left:15.6vw;
+	width:3.3vw;
+	height:100%;
+	text-align:center;
+	color:white;
+	font-weight:bold;
+	font-size:2.4vw;
+	text-shadow:0.2vw 0.2vw 0.4vw rgba(255,255,255,0.5);
+	opacity:0;
+}
+
+#nas1 {
+	left:16.2vw;
+}
+
+#nas2 {
+	left:35.8vw;
+}
+
+#nas3 {
+	left:55.4vw;
+}
+
+#nas4 {
+	left:75vw;
+}
