@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>VTV CGV Index</title>
+	
+	<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+	
+	<script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
+	<script type="module" src="JS/firebase.js"></script>
+	<script type='module' src='JS/functions.js'></script>
+	<script type="module" src="JS/sound_fb.js"></script>	
+	<script type="module" src="JS/index_fb.js"></script>
+	
+    <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+	<link rel="stylesheet" type="text/css" href="CSS/site.css">
+	
+    <meta charset="utf-8" />
+</head>
+<body>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<div class='graphics'>
+		<div class='titles'>
+			<video id='intro' muted>
+				<source src="Graphics/Intro.mp4" type="video/mp4">
+			</video>
+			<video id='rt1' muted>
+				<source src="Graphics/Phanxa.mp4" type="video/mp4">
+			</video>
+			<video id='rt2' muted>
+				<source src="Graphics/Giainghia.mp4" type="video/mp4">
+			</video>
+			<video id='rt3' muted>
+				<source src="Graphics/Xauchuoi.mp4" type="video/mp4">
+			</video>
+			<video id='rt4' muted>
+				<source src="Graphics/Soanngoi.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class='question'>
+			<video id='question-1' muted>
+				<source src="Graphics/question_1.mp4" type="video/mp4">
+			</video>
+			<video id='question-2' muted>
+				<source src="Graphics/question_2.mp4" type="video/mp4">
+			</video>
+			<div id='question_content'>
+				<p class='round' id='round_q'></p>
+				<p id='players_left'></p>
+				<p id='timer'></p>
+				<table id='q_text'>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+				<p id='answer'></p>
+			</div>
+		</div>
+		<div class='scoreboard'>
+			<video id='scoreboard-1' muted>
+				<source src="Graphics/scoreboard_1.mp4" type="video/mp4">
+			</video>
+			<video id='scoreboard-2' muted>
+				<source src="Graphics/scoreboard_2.mp4" type="video/mp4">
+			</video>
+			<p class='round' id='round_s'>Vòng 1</p>
+			<div class='nas' id='nas1'>
+				<p class='sbn' id='sbn1'>NGƯỜI CHƠI 1</p>
+				<p class='sbs' id='sbs1'>0</p>
+			</div>
+			<div class='nas' id='nas2'>
+				<p class='sbn' id='sbn2'>NGƯỜI CHƠI 2</p>
+				<p class='sbs' id='sbs2'>0</p>
+			</div>
+			<div class='nas' id='nas3'>
+				<p class='sbn' id='sbn3'>NGƯỜI CHƠI 3</p>
+				<p class='sbs' id='sbs3'>0</p>
+			</div>
+			<div class='nas' id='nas4'>
+				<p class='sbn' id='sbn4'>NGƯỜI CHƠI 4</p>
+				<p class='sbs' id='sbs4'>0</p>
+			</div>
+		</div>
+		
+	</div>
+	<script>
+		var at = '';
+		var at2 = '';
+		var at3 = '';
+		var at4 = '';
+		var at5 = '';
+		
+		var played_questions = 0;
+	</script>
+</body>
+</html>

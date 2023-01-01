@@ -1,0 +1,184 @@
+<html>
+<head>
+    <title>VTV CGV Controller</title>
+	
+	<link rel='shortcut icon' href='Graphics/favicon.ico' type='image/x-icon'>
+	<link rel='icon' href='Graphics/favicon.ico' type='image/x-icon'>
+	
+	<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+	<script type='text/javascript' src='JS/jquery-3.3.1.min.js'></script>
+	<script type='module' src='JS/firebase.js'></script>
+	<script type='module' src='JS/functions.js'></script>	
+	<script type='module' src='JS/controller_fb.js'></script>
+	
+    <link rel='stylesheet' type='text/css' href='CSS/reset.css'>
+	<link rel='stylesheet' type='text/css' href='CSS/site_controller.css'>
+	
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='utf-8' />
+</head>
+<body>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<div class='amthanh'>
+		<p class='title' id='t1'>Hình hiệu và Âm thanh</p>
+		<button class='autoname' id='hinhhieu'>Hình hiệu</button>
+		<button class='autoname' id='modau'>Mở đầu</button>
+		<button class='autoname' id='gtnc1'>GTNC (1)</button>
+		<button class='autoname' id='gtnc2'>GTNC (2)</button>
+		<button class='autoname' id='gtbcv'>GT Ban cố vấn</button>
+		<button class='autoname' id='giailao'>Nghỉ giải lao</button>
+		<button class='autoname' id='vtm1'>Vòng thi mới (1)</button>
+		<button class='autoname' id='vtm2'>Vòng thi mới (2)</button>
+		<button class='autoname' id='bdvt1'>BDVT(1)</button>
+		<button class='autoname' id='bdvt2'>BDVT(2)</button>
+		<button class='autoname' id='bdvt3'>BDVT(3)</button>
+		<button class='autoname' id='ncd1cl'>NCĐ1(CL)</button>
+		<button class='autoname' id='lcv1'>LC(V1)</button>
+		<button class='autoname' id='lcv2'>LC(V2)</button>
+		<button class='autoname' id='lcv3'>LC(V3)</button>
+		<button class='autoname' id='lcv4'>LC(V4)</button>
+		<button class='autoname' id='dung'>Đúng</button>
+		<button class='autoname' id='sai'>Sai</button>
+		<button class='autoname' id='ht'>Hoàn thành</button>
+		<button class='autoname' id='tkd'>Tổng kết điểm</button>
+		<button class='autoname' id='bhcd'>Bài hát chủ đề</button>
+		<button class='autoname' id='hdh'>Hiện đồ hoạ</button>
+		<button class='autoname' id='nv'>Ngai vua</button>
+		<button class='autoname' id='gtlc1'>Luật chơi (1)</button>
+		<button class='autoname' id='gtlc2'>Luật chơi (2)</button>
+		<button class='autoname' id='nn1'>1</button>
+		<button class='autoname' id='nn2'>2</button>
+		<button class='autoname' id='nn3'>3</button>
+		<button class='autoname' id='nn4'>4</button>
+		<button class='autoname' id='nn5'>5</button>
+		<button class='autoname' id='nn6'>6</button>
+		<button class='autoname' id='nn7'>7</button>
+		<button class='autoname' id='nn8'>8</button>
+		<button class='autoname' id='nn9'>9</button>
+		<button class='autoname' id='suspense'>Sp</button>
+		<button class='autoname' id='pq'>PQ</button>
+		<button class='autoname' id='ctd'>Chọn từ trong từ điển</button>
+		<button class='autoname' id='stopat'>Dừng nhạc</button>
+	</div>
+	<div class='browser'>
+		<p class='title' id='t2'>Nâng cao</p>
+		<button class='autoname' id='reload'>Reload</button>
+		<button id='loadch'>Load câu hỏi</button>
+		<input type='file' id='getfilech' style="display:none" accept=".xls,.xlsx,.ods"></input>
+		<button id='loadnc'>Load thông tin người chơi</button>
+		<input type='file' id='getfilenc' style="display:none" accept=".xls,.xlsx,.ods"></input>
+	</div>
+	<div class='main'>
+		<p class='title' id='t3'>Phần chính</p>
+		<div id='question'>
+			<img src='Graphics/question_controller.png' style='width:100%;height:100%;left:0vw;'></img>
+			<p id='round'></p>
+			<p id='players_left'></p>
+			<p id='timer'></p>
+			<table id='q_text'>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<p id='answer'></p>
+		</div>
+		<textarea id='player_input' disabled></textarea>
+	</div>
+	<div class='index'>
+		<p class='title' id='t4'>Preview Màn hình chính</p>
+		<iframe src='http://localhost/vtv/index.html' frameborder='0' id='index_iframe'></iframe>
+	</div>
+	<div class='score'>
+		<p class='title' id='t5'>Bảng điểm</p>
+		<table id='score_table'>
+			<tr>
+				<td id='sn1'>Người chơi 1</td>
+				<td id='ss1'>0</td>
+			</tr>
+			<tr>
+				<td id='sn2'>Người chơi 2</td>
+				<td id='ss2'>0</td>
+			</tr>
+			<tr>
+				<td id='sn3'>Người chơi 3</td>
+				<td id='ss3'>0</td>
+			</tr>
+			<tr>
+				<td id='sn4'>Người chơi 4</td>
+				<td id='ss4'>0</td>
+			</tr>
+		</table>
+		<textarea class='score_change' id='sc1'>0</textarea>
+		<textarea class='score_change' id='sc2'>0</textarea>
+		<textarea class='score_change' id='sc3'>0</textarea>
+		<textarea class='score_change' id='sc4'>0</textarea>
+		<input type="checkbox" class='eliminated_change' id='ec1'></input>
+		<input type="checkbox" class='eliminated_change' id='ec2'></input>
+		<input type="checkbox" class='eliminated_change' id='ec3'></input>
+		<input type="checkbox" class='eliminated_change' id='ec4'></input>
+		<button id='update_score'>Update điểm</button>
+	</div>
+	<div class='round_control'>
+		<p class='title' id='t6'>Điều khiển vòng thi</p>
+		<select id='round_select'>
+			<option value='1'>Vòng 1: Phản xạ</option>
+			<option value='2'>Vòng 2: Giải nghĩa</option>
+			<option value='3'>Vòng 3: Xâu chuỗi</option>
+			<option value='4'>Vòng 4: Soán ngôi</option>
+		</select>
+		<button id='loadvt'>Load vòng thi</button>
+		<div id='round_control_frame'></div>
+		<p class='title' id='t7'>Tổng kết điểm</p>
+		<button class='autoname' id='hbtkd' disabled>Hiện bảng TKĐ</button>
+		<button class='autoname' id='abtkd' disabled>Ẩn bảng TKĐ</button>
+		<p id='hdnc'>Hiện điểm người chơi:</p>
+		<button class='autoname' id='hd1' disabled>NC1</button>
+		<button class='autoname' id='hd2' disabled>NC2</button>
+		<button class='autoname' id='hd3' disabled>NC3</button>
+		<button class='autoname' id='hd4' disabled>NC4</button>
+		<button class='autoname' id='lnc' disabled>Loại người chơi</button>
+		<p id='nbl'>Người chơi</p>
+	</div>
+	
+	<script>
+		var round = 0;
+		var rs = '';
+		
+		var nguoi_choi = [];
+		
+		var cau_hoi_1 = [];
+		var cau_hoi_chp_1 = [];
+		var cau_hoi_2 = [];
+		var cau_hoi_chp_2 = [];
+		var cau_hoi_3 = [];
+		var cau_hoi_chp_3 = [];
+		var cau_hoi_4 = [];
+		var file_cau_hoi = '';
+		var timer_int;
+		
+		var played_contestants = 0;
+		var played_questions = 0;
+		var tiebreak_questions_left = 0;
+		
+		var player_in_game = 0;
+		var player_buzz = 0;
+		var player_1_score = 0;
+		var is_player_1_eliminated = false;
+		var player_2_score = 0;
+		var is_player_2_eliminated = false;
+		var player_3_score = 0;
+		var is_player_3_eliminated = false;
+		var player_4_score = 0;
+		var is_player_4_eliminated = false;
+		
+		var eli_player_temp = 0;
+		var eliminated_players = [];
+		
+		var question = '';
+		var answer = '';
+		var timer = 0;
+		var dtn = 0;
+		
+		var is_timer_running = false;
+	</script>
+</body>

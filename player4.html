@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>VTV CGV - Người chơi 1</title>
+	
+	<link rel='shortcut icon' href='Graphics/favicon.ico' type='image/x-icon'>
+	<link rel='icon' href='Graphics/favicon.ico' type='image/x-icon'>
+	
+	<script type='text/javascript' src='JS/jquery-3.3.1.min.js'></script>
+	<script type='module' src='JS/firebase.js'></script>
+	<script type='module' src='JS/functions.js'></script>
+	<script type="module" src="JS/sound_fb.js"></script>	
+	<script type='module' src='JS/player_fb.js'></script>
+	
+    <link rel='stylesheet' type='text/css' href='CSS/reset.css'>
+	<link rel='stylesheet' type='text/css' href='CSS/site_player.css'>
+	
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='utf-8' />
+</head>
+<body>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<div id='question'>
+		<img src='Graphics/question_controller.png' style='width:100%;height:100%;left:0vw;'></img>
+		<p id='round'></p>
+		<p id='players_left'></p>
+		<p id='timer'></p>
+		<table id='q_text'>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		<p id='answer'></p>
+	</div>
+	<textarea id='input' disabled></textarea>
+	<button id='buzzer' disabled>Bấm chuông</button>
+	<div class='gpx' id='gpx1'></div>
+	<script>
+		var at = '';
+		var at2 = '';
+		var at3 = '';
+		var at4 = '';
+		var at5 = '';
+		
+		var number_of_player = 4;
+	</script>
+</body>
